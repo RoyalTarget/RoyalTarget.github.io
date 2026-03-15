@@ -10,6 +10,7 @@
 <meta property="og:description" content="Munich-based indie pop solo project. Music, photography, and merch.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://royaltarget.de">
+<meta property="og:image" content="https://royaltarget.de/images/og-image.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Barlow+Condensed:wght@300;400;600;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -77,6 +78,13 @@ section{padding:5rem 2rem}
 .mlk{display:inline-flex;align-items:center;gap:8px;padding:.8rem 1.8rem;border:2px solid var(--cream);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
 .mlk:hover{background:var(--red);border-color:var(--red)}
 .mlk svg{width:20px;height:20px;fill:currentColor}
+.album-card{max-width:1100px;margin:2rem auto 0}
+.album-link{display:flex;gap:2rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);text-decoration:none;color:var(--cream);transition:all .3s;overflow:hidden}
+.album-link:hover{background:rgba(255,255,255,.08);transform:translateY(-3px);border-color:var(--red)}
+.album-cover{width:200px;height:200px;object-fit:cover;flex-shrink:0}
+.album-info{padding:1.5rem;display:flex;flex-direction:column;justify-content:center}
+.album-title{font-family:'Big Shoulders Display',sans-serif;font-size:2rem;font-weight:900;letter-spacing:2px;margin:.5rem 0}
+@media(max-width:768px){.album-link{flex-direction:column}.album-cover{width:100%;height:auto}}
 .explore{background:var(--warm-white)}
 .dg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1000px;margin:0 auto}
 .dc{text-align:center;padding:4rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--cream);display:block;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:center;align-items:center}
@@ -174,9 +182,27 @@ footer a:hover{color:var(--red)}
 <a href="https://music.apple.com/de/album/im-only-sleeping-single/1599174465" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/im-only-sleeping.jpeg" alt="I'm Only Sleeping cover" class="sc-cover"><div class="sc-info"><div class="sy">2021</div><div class="sn">I'm Only Sleeping</div><div class="sde">A nod to the classics</div></div></a>
 <a href="https://music.apple.com/de/album/suddenly-single/1586760128" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/suddenly.jpeg" alt="Suddenly cover" class="sc-cover"><div class="sc-info"><div class="sy">2021</div><div class="sn">Suddenly</div><div class="sde">Discovering love, carried by a Peter Hook bassline</div></div></a>
 <a href="https://music.apple.com/de/album/the-ocean-single/1566772805" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/the-ocean.jpeg" alt="The Ocean cover" class="sc-cover"><div class="sc-info"><div class="sy">2021</div><div class="sn">The Ocean</div><div class="sde">Drowning in external circumstances, 80s basslines and atmosphere</div></div></a>
+<a href="https://music.apple.com/de/album/sitting-alone-single/1536926246" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/sitting-alone.jpeg" alt="Sitting Alone cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">Sitting Alone</div><div class="sde">A MANC cover — lockdown loneliness</div></div></a>
+<a href="https://music.apple.com/de/album/what-do-i-know-single/1516061406" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/what-do-i-know.jpeg" alt="What Do I Know cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">What Do I Know</div><div class="sde">Anti-Trump anthem featuring D.T. himself</div></div></a>
+<a href="https://music.apple.com/de/album/my-love-for-me-single/1516061406" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/my-love-for-me.jpeg" alt="My Love for Me cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">My Love for Me</div><div class="sde">A song about self-love and vanity</div></div></a>
+<a href="https://music.apple.com/de/album/leave-her-single/1516061406" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/leave-her.jpeg" alt="Leave Her cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">Leave Her</div><div class="sde">Dark thoughts that won't let go</div></div></a>
 <a href="https://music.apple.com/de/album/see-the-sun-single/1543669299" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/see-the-sun.jpeg" alt="See the Sun cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">See the Sun</div><div class="sde">Looking for light</div></div></a>
 <a href="https://music.apple.com/de/album/little-world-single/1536926246" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/come-and-see-me.jpeg" alt="Come and See Me cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">Come and See Me</div><div class="sde">An invitation</div></div></a>
 <a href="https://music.apple.com/de/album/little-world-single/1536926246" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/little-world.jpeg" alt="Little World cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">Little World</div><div class="sde">A pilot's small world in Manchester</div></div></a>
+<a href="https://music.apple.com/de/album/brickheads-single/1516061406" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/brickheads.jpeg" alt="Brickheads cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">Brickheads</div><div class="sde">Against ignorance</div></div></a>
+<a href="https://music.apple.com/de/album/by-my-side-single/1489806133" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/by-my-side.jpeg" alt="By My Side cover" class="sc-cover"><div class="sc-info"><div class="sy">2019</div><div class="sn">By My Side</div><div class="sde">Written after the loss of my father</div></div></a>
+<a href="https://music.apple.com/de/album/my-girl-single/1479808822" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/my-girl.jpeg" alt="My Girl cover" class="sc-cover"><div class="sc-info"><div class="sy">2019</div><div class="sn">My Girl</div><div class="sde">A love song about a difficult girl</div></div></a>
+<a href="https://music.apple.com/de/album/get-out-of-my-mind-single/1481680749" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/get-out-of-my-mind.jpeg" alt="Get Out of My Mind cover" class="sc-cover"><div class="sc-info"><div class="sy">2019</div><div class="sn">Get Out of My Mind</div><div class="sde">About the hatred between brothers</div></div></a>
+</div>
+<div class="album-card fi">
+<a href="https://music.apple.com/de/album/rough-mix/1476130735" target="_blank" rel="noopener" class="album-link">
+<img src="images/rough-mix.jpg" alt="Rough Mix album cover" class="album-cover">
+<div class="album-info">
+<div class="sy">2019 &middot; Album &middot; 11 Tracks</div>
+<div class="album-title">Rough Mix</div>
+<div class="sde">The early recordings. Hey Now, Ghost, Heavenly Treasure, Let the Story Begin, Digital Friend, Lost My Mind, Perfect Match, Wishes, What Would You Do, So Hard, My Day.</div>
+</div>
+</a>
 </div>
 <div class="ml fi">
 <a href="https://music.apple.com/de/artist/royal-target/1476131156" target="_blank" rel="noopener" class="mlk">&#127925; Apple Music</a>
@@ -203,6 +229,7 @@ footer a:hover{color:var(--red)}
 <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
 <a href="https://github.com/RoyalTarget/royal-target-song-primer" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
 <a href="https://www.jango.com/music/Royal+Target" target="_blank" rel="noopener" class="sl">&#9654; Jango Radio</a>
+<a href="https://www.youtube.com/@royaltarget7388" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
 </div>
 </section>
 
