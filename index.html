@@ -11,8 +11,6 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://royaltarget.de">
 <meta property="og:image" content="https://royaltarget.de/images/og-image.jpeg">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">  
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Barlow+Condensed:wght@300;400;600;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -88,6 +86,26 @@ section{padding:5rem 2rem}
 .album-title{font-family:'Big Shoulders Display',sans-serif;font-size:2rem;font-weight:900;letter-spacing:2px;margin:.5rem 0}
 @media(max-width:768px){.album-link{flex-direction:column}.album-cover{width:100%;height:auto}}
 .explore{background:var(--warm-white)}
+.wip{position:relative;overflow:hidden;min-height:700px}
+.wip-bg{position:absolute;inset:0;background:url('images/gallery-studio.jpeg') center/cover no-repeat;filter:brightness(.15);z-index:0}
+.wip .st{color:var(--cream);position:relative;z-index:2}
+.wip .sd{position:relative;z-index:2}
+.wip-sub{text-align:center;color:var(--aged-gold);font-family:'Special Elite',cursive;font-size:1.1rem;margin-top:-2rem;margin-bottom:2rem;position:relative;z-index:2}
+.sticker-board{position:relative;max-width:1100px;margin:0 auto;min-height:500px;z-index:2}
+.sticker{position:absolute;cursor:pointer;transition:all .3s;filter:drop-shadow(4px 6px 12px rgba(0,0,0,.6))}
+.sticker:hover{transform:scale(1.08);filter:drop-shadow(6px 10px 20px rgba(0,0,0,.8));z-index:10}
+.sticker img{width:100%;height:100%;object-fit:cover;display:block}
+.sticker-label{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);background:var(--red);color:var(--cream);font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:.3rem .8rem;white-space:nowrap}
+.sticker-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;background:rgba(224,32,32,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;opacity:0;transition:opacity .3s}
+.sticker:hover .sticker-play{opacity:1}
+.sticker-type{position:absolute;top:8px;right:8px;background:rgba(10,20,68,.8);color:var(--aged-gold);font-family:'Special Elite',cursive;font-size:.65rem;padding:.2rem .5rem;letter-spacing:1px}
+.wip-player-overlay{display:none;position:fixed;inset:0;background:rgba(6,14,48,.92);z-index:1000;justify-content:center;align-items:center;flex-direction:column}
+.wip-player-overlay.active{display:flex}
+.wip-player-close{position:absolute;top:2rem;right:2rem;color:var(--cream);font-size:2rem;cursor:pointer;background:none;border:none;font-family:'Big Shoulders Display',sans-serif}
+.wip-player-title{font-family:'Big Shoulders Display',sans-serif;font-size:2rem;color:var(--cream);margin-bottom:1.5rem;letter-spacing:3px;text-transform:uppercase}
+.wip-player-content{max-width:600px;width:90%}
+.wip-player-content audio,.wip-player-content video{width:100%;border-radius:4px;outline:none}
+@media(max-width:768px){.sticker-board{min-height:auto;display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;padding:1rem}.sticker{position:relative!important;transform:rotate(0deg)!important;width:45%!important;height:auto!important}.sticker img{height:auto}}
 .dg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1000px;margin:0 auto}
 .dc{text-align:center;padding:4rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--cream);display:block;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:center;align-items:center}
 .dc-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.35);transition:filter .4s}
@@ -127,6 +145,7 @@ footer a:hover{color:var(--red)}
 <ul class="nav-links">
 <li><a href="#about" onclick="showMain()">About</a></li>
 <li><a href="#music" onclick="showMain()">Music</a></li>
+<li><a href="#wip" onclick="showMain()">WIP</a></li>
 <li><a href="#explore" onclick="showMain()">Explore</a></li>
 <li><a href="#connect" onclick="showMain()">Connect</a></li>
 </ul>
@@ -211,6 +230,50 @@ footer a:hover{color:var(--red)}
 <a href="https://open.spotify.com/artist/3mjuUgZMPurmTgMnklN2g3" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>
 <a href="https://royaltarget.bandcamp.com" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg>Bandcamp</a>
 <a href="https://soundcloud.com/smiths1967" target="_blank" rel="noopener" class="mlk">&#9835; SoundCloud</a>
+</div>
+</section>
+
+<section class="wip" id="wip">
+<div class="wip-bg"></div>
+<h2 class="st fi">Work in Progress</h2>
+<div class="sd fi"></div>
+<p class="wip-sub fi">A peek into what's brewing in the basement</p>
+<div class="sticker-board">
+
+<div class="sticker fi" style="left:3%;top:20px;width:220px;height:220px;transform:rotate(-4deg)" onclick="openWipPlayer('Mirror','audio','wip/wip-mirror.mp3')">
+<img src="images/wip-mirror.jpeg" alt="Mirror">
+<div class="sticker-play">&#9654;</div>
+<div class="sticker-type">MP3</div>
+<div class="sticker-label">Mirror</div>
+</div>
+
+<div class="sticker fi" style="left:28%;top:60px;width:200px;height:200px;transform:rotate(3deg)" onclick="openWipPlayer('Contemplating','audio','wip/wip-contemplating.mp3')">
+<img src="images/wip-contemplating.jpeg" alt="Contemplating">
+<div class="sticker-play">&#9654;</div>
+<div class="sticker-type">MP3</div>
+<div class="sticker-label">Contemplating</div>
+</div>
+
+<div class="sticker fi" style="left:52%;top:10px;width:240px;height:180px;transform:rotate(-2deg)" onclick="openWipPlayer('Empty Streets','video','wip/wip-emptystreets.mp4')">
+<img src="images/wip-mirror.jpeg" alt="Empty Streets" style="filter:hue-rotate(180deg) brightness(.8)">
+<div class="sticker-play">&#9654;</div>
+<div class="sticker-type">Video</div>
+<div class="sticker-label">Empty Streets</div>
+</div>
+
+<div class="sticker fi" style="left:78%;top:50px;width:190px;height:190px;transform:rotate(5deg)" onclick="openWipPlayer('Jammen im Keller','video','wip/wip-jammen.mp4')">
+<img src="images/gallery-studio.jpeg" alt="Jammen im Keller">
+<div class="sticker-play">&#9654;</div>
+<div class="sticker-type">Video</div>
+<div class="sticker-label">Jammen im Keller</div>
+</div>
+
+</div>
+
+<div class="wip-player-overlay" id="wipPlayer">
+<button class="wip-player-close" onclick="closeWipPlayer()">&times;</button>
+<div class="wip-player-title" id="wipPlayerTitle"></div>
+<div class="wip-player-content" id="wipPlayerContent"></div>
 </div>
 </section>
 
@@ -301,6 +364,14 @@ document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
 window.addEventListener('scroll',()=>{document.querySelector('nav').style.padding=window.scrollY>50?'.5rem 2rem':'.8rem 2rem'});
 function showLegal(id){document.getElementById('mc').style.display='none';document.querySelectorAll('.lp').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);document.querySelector('.nav-links').classList.remove('active')}
 function showMain(){document.getElementById('mc').style.display='block';document.querySelectorAll('.lp').forEach(p=>p.classList.remove('active'));document.querySelector('.nav-links').classList.remove('active')}
+function openWipPlayer(title,type,src){
+var o=document.getElementById('wipPlayer');
+document.getElementById('wipPlayerTitle').textContent=title;
+var c=document.getElementById('wipPlayerContent');
+if(type==='audio'){c.innerHTML='<audio controls autoplay><source src="'+src+'" type="audio/mpeg">Your browser does not support audio.</audio>'}
+else{c.innerHTML='<video controls autoplay playsinline><source src="'+src+'" type="video/mp4">Your browser does not support video.</video>'}
+o.classList.add('active');document.body.style.overflow='hidden'}
+function closeWipPlayer(){var o=document.getElementById('wipPlayer');o.classList.remove('active');document.getElementById('wipPlayerContent').innerHTML='';document.body.style.overflow=''}
 </script>
 </body>
 </html>
