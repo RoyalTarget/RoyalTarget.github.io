@@ -56,13 +56,16 @@ section{padding:5rem 2rem}
 .music{background:var(--deep-navy);color:var(--cream)}
 .music .st{color:var(--cream)}
 .sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
-.sc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:1.8rem;transition:all .3s;position:relative;overflow:hidden;text-decoration:none;color:var(--cream);display:block}
-.sc::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--red);transform:scaleY(0);transition:transform .3s;transform-origin:bottom}
-.sc:hover::before{transform:scaleY(1)}.sc:hover{background:rgba(255,255,255,.08);transform:translateY(-3px)}
-.sy{font-family:'Special Elite',cursive;font-size:.8rem;color:var(--aged-gold);letter-spacing:2px;margin-bottom:.5rem}
-.sn{font-family:'Big Shoulders Display',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:.5rem;letter-spacing:1px}
-.sde{font-size:.95rem;color:rgba(245,240,232,.6);font-weight:300;line-height:1.5}
-.pi{position:absolute;top:1.5rem;right:1.5rem;font-size:1.2rem;opacity:.4;transition:opacity .3s}
+.sc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:all .3s;position:relative;overflow:hidden;text-decoration:none;color:var(--cream);display:block}
+.sc::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--red);transform:scaleY(0);transition:transform .3s;transform-origin:bottom;z-index:2}
+.sc:hover::before{transform:scaleY(1)}.sc:hover{border-color:rgba(255,255,255,.25);transform:translateY(-3px)}
+.sc-cover{width:100%;aspect-ratio:1;object-fit:cover;display:block;filter:brightness(.85);transition:filter .3s}
+.sc:hover .sc-cover{filter:brightness(1)}
+.sc-info{padding:1.2rem 1.5rem}
+.sy{font-family:'Special Elite',cursive;font-size:.8rem;color:var(--aged-gold);letter-spacing:2px;margin-bottom:.4rem}
+.sn{font-family:'Big Shoulders Display',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:.4rem;letter-spacing:1px}
+.sde{font-size:.9rem;color:rgba(245,240,232,.6);font-weight:300;line-height:1.4}
+.pi{position:absolute;top:1rem;right:1rem;font-size:1.2rem;opacity:0;transition:opacity .3s;z-index:2;background:rgba(224,32,32,.8);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .sc:hover .pi{opacity:1}
 .ml{display:flex;justify-content:center;gap:2rem;margin-top:3rem;flex-wrap:wrap}
 .mlk{display:inline-flex;align-items:center;gap:8px;padding:.8rem 1.8rem;border:2px solid var(--cream);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
@@ -142,20 +145,20 @@ footer a:hover{color:var(--red)}
 <h2 class="st fi">Music</h2>
 <div class="sd fi"></div>
 <div class="sg">
-<a href="https://open.spotify.com/track/2wJzEpzM0EdKCea0LcOXzv" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2024</div><div class="sn">Fear to Fail</div><div class="sde">The latest single</div></a>
-<a href="https://open.spotify.com/track/70ZNMwPRtuVJSyyCDwQK4v" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2022</div><div class="sn">Losing Your Way</div><div class="sde">Inspired by events that shook the foundations of democracy</div></a>
-<a href="https://open.spotify.com/track/14V2cl5MlVf2MtaKZha6rs" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2021</div><div class="sn">I'm Only Sleeping</div><div class="sde">A nod to the classics</div></a>
-<a href="https://open.spotify.com/track/5UKu2T9UwXEkRb76rKelEC" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2021</div><div class="sn">Suddenly</div><div class="sde">Discovering love, carried by a Peter Hook bassline</div></a>
-<a href="https://open.spotify.com/track/5zeMnXrvnJH6cVLtexR74S" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2021</div><div class="sn">The Ocean</div><div class="sde">Drowning in external circumstances, 80s basslines and atmosphere</div></a>
-<a href="https://open.spotify.com/track/1C5swvZeU9D94aTAhvFKCY" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2020</div><div class="sn">Come and See Me</div><div class="sde">An invitation</div></a>
-<a href="https://open.spotify.com/track/5LsAx36mmt5KdA0uS0cYrK" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2020</div><div class="sn">See the Sun</div><div class="sde">Looking for light</div></a>
-<a href="https://open.spotify.com/track/2NaZx0rTkGSfPeVNUYKzAy" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2020</div><div class="sn">Little World</div><div class="sde">Small stories, big feelings</div></a>
+<a href="https://music.apple.com/de/album/fear-to-fail-single/1662076701" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/fear-to-fail.jpeg" alt="Fear to Fail cover" class="sc-cover"><div class="sc-info"><div class="sy">2023</div><div class="sn">Fear to Fail</div><div class="sde">The latest single</div></div></a>
+<a href="https://music.apple.com/de/album/losing-your-way-single/1611886869" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/losing-your-way.jpeg" alt="Losing Your Way cover" class="sc-cover"><div class="sc-info"><div class="sy">2022</div><div class="sn">Losing Your Way</div><div class="sde">Inspired by events that shook the foundations of democracy</div></div></a>
+<a href="https://music.apple.com/de/album/im-only-sleeping-single/1599174465" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/im-only-sleeping.jpeg" alt="I'm Only Sleeping cover" class="sc-cover"><div class="sc-info"><div class="sy">2021</div><div class="sn">I'm Only Sleeping</div><div class="sde">A nod to the classics</div></div></a>
+<a href="https://music.apple.com/de/album/suddenly-single/1586760128" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/suddenly.jpeg" alt="Suddenly cover" class="sc-cover"><div class="sc-info"><div class="sy">2021</div><div class="sn">Suddenly</div><div class="sde">Discovering love, carried by a Peter Hook bassline</div></div></a>
+<a href="https://music.apple.com/de/album/the-ocean-single/1566772805" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/the-ocean.jpeg" alt="The Ocean cover" class="sc-cover"><div class="sc-info"><div class="sy">2021</div><div class="sn">The Ocean</div><div class="sde">Drowning in external circumstances, 80s basslines and atmosphere</div></div></a>
+<a href="https://music.apple.com/de/album/see-the-sun-single/1543669299" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/see-the-sun.jpeg" alt="See the Sun cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">See the Sun</div><div class="sde">Looking for light</div></div></a>
+<a href="https://music.apple.com/de/album/little-world-single/1536926246" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/come-and-see-me.jpeg" alt="Come and See Me cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">Come and See Me</div><div class="sde">An invitation</div></div></a>
+<a href="https://music.apple.com/de/album/little-world-single/1536926246" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><img src="images/little-world.jpeg" alt="Little World cover" class="sc-cover"><div class="sc-info"><div class="sy">2020</div><div class="sn">Little World</div><div class="sde">A pilot's small world in Manchester</div></div></a>
 </div>
 <div class="ml fi">
+<a href="https://music.apple.com/de/artist/royal-target/1476131156" target="_blank" rel="noopener" class="mlk">&#127925; Apple Music</a>
 <a href="https://open.spotify.com/artist/3mjuUgZMPurmTgMnklN2g3" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>
 <a href="https://royaltarget.bandcamp.com" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg>Bandcamp</a>
 <a href="https://soundcloud.com/smiths1967" target="_blank" rel="noopener" class="mlk">&#9835; SoundCloud</a>
-<a href="https://music.apple.com/artist/royal-target" target="_blank" rel="noopener" class="mlk">&#127925; Apple Music</a>
 </div>
 </section>
 
