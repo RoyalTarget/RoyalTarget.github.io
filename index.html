@@ -87,7 +87,7 @@ section{padding:5rem 2rem}
 @media(max-width:768px){.album-link{flex-direction:column}.album-cover{width:100%;height:auto}}
 .explore{background:var(--warm-white)}
 .wip{position:relative;overflow:hidden;min-height:700px}
-.wip-bg{position:absolute;inset:0;background:url('images/gallery-studio.jpeg') center/cover no-repeat;filter:brightness(.15);z-index:0}
+.wip-bg{position:absolute;inset:0;background:url('images/gallery-studio.jpeg') center/cover no-repeat;filter:brightness(.3);z-index:0}
 .wip .st{color:var(--cream);position:relative;z-index:2}
 .wip .sd{position:relative;z-index:2}
 .wip-sub{text-align:center;color:var(--aged-gold);font-family:'Special Elite',cursive;font-size:1.1rem;margin-top:-2rem;margin-bottom:2rem;position:relative;z-index:2}
@@ -105,6 +105,10 @@ section{padding:5rem 2rem}
 .wip-player-title{font-family:'Big Shoulders Display',sans-serif;font-size:2rem;color:var(--cream);margin-bottom:1.5rem;letter-spacing:3px;text-transform:uppercase}
 .wip-player-content{max-width:600px;width:90%}
 .wip-player-content audio,.wip-player-content video{width:100%;border-radius:4px;outline:none}
+.wip-lyrics{margin-top:1.5rem;max-height:300px;overflow-y:auto;padding:1rem;background:rgba(10,20,68,.5);border:1px solid rgba(255,255,255,.1);border-radius:4px}
+.wip-lyrics p{color:rgba(245,240,232,.7);font-family:'Barlow Condensed',sans-serif;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:.3rem}
+.wip-lyrics .chord{color:var(--aged-gold);font-family:'Special Elite',cursive;font-size:.85rem;margin-bottom:0;margin-top:.8rem}
+.wip-lyrics .section{color:var(--red);font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;margin-top:1.2rem;margin-bottom:.3rem}
 @media(max-width:768px){.sticker-board{min-height:auto;display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;padding:1rem}.sticker{position:relative!important;transform:rotate(0deg)!important;width:45%!important;height:auto!important}.sticker img{height:auto}}
 .dg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1000px;margin:0 auto}
 .dc{text-align:center;padding:4rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--cream);display:block;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:center;align-items:center}
@@ -240,14 +244,14 @@ footer a:hover{color:var(--red)}
 <p class="wip-sub fi">A peek into what's brewing in the basement</p>
 <div class="sticker-board">
 
-<div class="sticker fi" style="left:3%;top:20px;width:220px;height:220px;transform:rotate(-4deg)" onclick="openWipPlayer('Mirror','audio','wip/wip-mirror.mp3')">
-<img src="images/wip-mirror.jpeg" alt="Mirror">
+<div class="sticker fi" style="left:3%;top:20px;width:220px;height:220px;transform:rotate(-4deg)" onclick="openWipPlayer('Look in the Mirror','audio','wip/wip-mirror.mp3','lyrics-mirror')">
+<img src="images/wip-mirror.jpeg" alt="Look in the Mirror">
 <div class="sticker-play">&#9654;</div>
 <div class="sticker-type">MP3</div>
-<div class="sticker-label">Mirror</div>
+<div class="sticker-label">Look in the Mirror</div>
 </div>
 
-<div class="sticker fi" style="left:28%;top:60px;width:200px;height:200px;transform:rotate(3deg)" onclick="openWipPlayer('Contemplating','audio','wip/wip-contemplating.mp3')">
+<div class="sticker fi" style="left:28%;top:60px;width:200px;height:200px;transform:rotate(3deg)" onclick="openWipPlayer('Contemplating','audio','wip/wip-contemplating.mp3','lyrics-contemplating')">
 <img src="images/wip-contemplating.jpeg" alt="Contemplating">
 <div class="sticker-play">&#9654;</div>
 <div class="sticker-type">MP3</div>
@@ -255,19 +259,82 @@ footer a:hover{color:var(--red)}
 </div>
 
 <div class="sticker fi" style="left:52%;top:10px;width:240px;height:180px;transform:rotate(-2deg)" onclick="openWipPlayer('Empty Streets','video','wip/wip-emptystreets.mp4')">
-<img src="images/wip-mirror.jpeg" alt="Empty Streets" style="filter:hue-rotate(180deg) brightness(.8)">
+<img src="images/wip-emptystreets.jpeg" alt="Empty Streets">
 <div class="sticker-play">&#9654;</div>
 <div class="sticker-type">Video</div>
 <div class="sticker-label">Empty Streets</div>
 </div>
 
 <div class="sticker fi" style="left:78%;top:50px;width:190px;height:190px;transform:rotate(5deg)" onclick="openWipPlayer('Jammen im Keller','video','wip/wip-jammen.mp4')">
-<img src="images/gallery-studio.jpeg" alt="Jammen im Keller">
+<img src="images/wip-jammen.jpeg" alt="Jammen im Keller">
 <div class="sticker-play">&#9654;</div>
 <div class="sticker-type">Video</div>
 <div class="sticker-label">Jammen im Keller</div>
 </div>
 
+</div>
+
+<!-- Hidden lyrics -->
+<div id="lyrics-mirror" style="display:none">
+<p class="chord">A &nbsp;&nbsp;&nbsp; Bm</p>
+<p>It's been around a bit, quite a while</p>
+<p>Tiny misunderstanding, hopes a tad too high</p>
+<p>fairly well, wiped out, and some cry</p>
+<p>words some hurt — it's so sad and I don't know why</p>
+<p>&nbsp;</p>
+<p>Tweak it a bit, but I couldn't care less</p>
+<p>Choice matters over need, end up in a mess</p>
+<p>no mean feat — and a slight return</p>
+<p>grab bits and pieces, bits and pieces they're hard to earn</p>
+<p>&nbsp;</p>
+<p class="section">Chorus</p>
+<p class="chord">D &nbsp;&nbsp;&nbsp; Bm &nbsp;&nbsp;&nbsp; A</p>
+<p>Look in the mirror, see no face but a crowd</p>
+<p>Look in the mirror, see my life fading out</p>
+<p>&nbsp;</p>
+<p>Look in the mirror, see no face but a crowd</p>
+<p>Look in the mirror, hear my words far too loud</p>
+<p>&nbsp;</p>
+<p class="chord">C# &nbsp;&nbsp;&nbsp; E</p>
+<p>And I sing and I sing it so lou-loud</p>
+<p>And I sing and I sing it so lou-loud</p>
+<p>And I sing and I sing it so lou-loud</p>
+<p>&nbsp;</p>
+<p class="chord">F#m &nbsp;&nbsp;&nbsp; D</p>
+<p>so lou-loud lalalalala</p>
+<p>Look in the mirror, am I still mine?</p>
+<p>Look in the mirror, we're slipping out of time</p>
+</div>
+
+<div id="lyrics-contemplating" style="display:none">
+<p class="chord">Em &nbsp;&nbsp;&nbsp; C</p>
+<p>If you had a bad day</p>
+<p>This will sort you out</p>
+<p>Good, Bad and ugly</p>
+<p>4 years of hope</p>
+<p>&nbsp;</p>
+<p>Contemplating</p>
+<p>Nor do I care to find out</p>
+<p>Live their lies</p>
+<p>Clean their hands</p>
+<p>In the pure white sands</p>
+<p>&nbsp;</p>
+<p>The Past is unpredictable</p>
+<p>But the Future is certain</p>
+<p>Coincidence, random life.</p>
+<p>Connect the dots Behind Bars</p>
+<p>&nbsp;</p>
+<p class="section">Chorus</p>
+<p class="chord">Em &nbsp;&nbsp;&nbsp; C</p>
+<p>Unexpected melody, incredibly dramatic</p>
+<p>People in the cheaper seat, get on your feet and clap your hands</p>
+<p>&nbsp;</p>
+<p class="chord">C &nbsp;&nbsp;&nbsp; Am</p>
+<p>Get up your feet</p>
+<p>and clap your hands</p>
+<p>Get up your feet</p>
+<p class="chord">G &nbsp;&nbsp;&nbsp; Gm &nbsp;&nbsp;&nbsp; Em</p>
+<p>and clap yours</p>
 </div>
 
 <div class="wip-player-overlay" id="wipPlayer">
@@ -364,12 +431,15 @@ document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
 window.addEventListener('scroll',()=>{document.querySelector('nav').style.padding=window.scrollY>50?'.5rem 2rem':'.8rem 2rem'});
 function showLegal(id){document.getElementById('mc').style.display='none';document.querySelectorAll('.lp').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);document.querySelector('.nav-links').classList.remove('active')}
 function showMain(){document.getElementById('mc').style.display='block';document.querySelectorAll('.lp').forEach(p=>p.classList.remove('active'));document.querySelector('.nav-links').classList.remove('active')}
-function openWipPlayer(title,type,src){
+function openWipPlayer(title,type,src,lyricsId){
 var o=document.getElementById('wipPlayer');
 document.getElementById('wipPlayerTitle').textContent=title;
 var c=document.getElementById('wipPlayerContent');
-if(type==='audio'){c.innerHTML='<audio controls autoplay><source src="'+src+'" type="audio/mpeg">Your browser does not support audio.</audio>'}
-else{c.innerHTML='<video controls autoplay playsinline><source src="'+src+'" type="video/mp4">Your browser does not support video.</video>'}
+var html='';
+if(type==='audio'){html='<audio controls autoplay><source src="'+src+'" type="audio/mpeg">Your browser does not support audio.</audio>'}
+else{html='<video controls autoplay playsinline><source src="'+src+'" type="video/mp4">Your browser does not support video.</video>'}
+if(lyricsId){var lEl=document.getElementById(lyricsId);if(lEl){html+='<div class="wip-lyrics">'+lEl.innerHTML+'</div>'}}
+c.innerHTML=html;
 o.classList.add('active');document.body.style.overflow='hidden'}
 function closeWipPlayer(){var o=document.getElementById('wipPlayer');o.classList.remove('active');document.getElementById('wipPlayerContent').innerHTML='';document.body.style.overflow=''}
 </script>
