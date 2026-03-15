@@ -53,6 +53,12 @@ section{padding:5rem 2rem}
 .pq::before{content:'\201C';font-family:'Playfair Display',serif;font-size:5rem;color:var(--red);position:absolute;top:-10px;left:15px;line-height:1}
 .pq p{font-family:'Special Elite',cursive;font-size:1.15rem;line-height:1.7;padding-left:1rem}
 .pq cite{display:block;margin-top:1rem;font-family:'Big Shoulders Display',sans-serif;font-style:normal;font-weight:700;color:var(--aged-gold);letter-spacing:2px;text-transform:uppercase;font-size:.9rem;padding-left:1rem}
+.gallery{margin-top:3rem;overflow:hidden;position:relative}
+.gallery-track{display:flex;gap:1rem;animation:galleryScroll 30s linear infinite;width:max-content}
+.gallery-track:hover{animation-play-state:paused}
+.gallery-track img{height:200px;width:auto;object-fit:cover;border:3px solid var(--navy);filter:saturate(.8);transition:all .4s}
+.gallery-track img:hover{filter:saturate(1.1);transform:scale(1.05);border-color:var(--red)}
+@keyframes galleryScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .music{background:var(--deep-navy);color:var(--cream)}
 .music .st{color:var(--cream)}
 .sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
@@ -139,6 +145,22 @@ footer a:hover{color:var(--red)}
 <div class="pq fi">
 <p>This Munich based solo project has been something of a regular feature on the Beat The Delete pages, with numerous singles that cover just about every nuance of jangle-pop you can think of. This is the first time he has added jangle to early era The Cure though and he pulls it off with aplomb!</p>
 <cite>Beat The Delete</cite>
+</div>
+<div class="gallery fi">
+<div class="gallery-track">
+<img src="images/gallery-rickenbacker.JPG" alt="Rickenbacker bass and Telecaster with Marshall amp">
+<img src="images/gallery-telecaster.jpeg" alt="Fender Telecaster close-up psychedelic">
+<img src="images/gallery-plectrum.jpeg" alt="Roundel plectrum on Telecaster fretboard">
+<img src="images/gallery-rickenbacker2.jpeg" alt="Rickenbacker bass with Orange amp">
+<img src="images/gallery-studio.jpeg" alt="Royal Target basement studio with Logic Pro">
+<img src="images/gallery-collage.jpg" alt="Royal Target gear collage">
+<img src="images/gallery-rickenbacker.JPG" alt="Rickenbacker bass and Telecaster with Marshall amp">
+<img src="images/gallery-telecaster.jpeg" alt="Fender Telecaster close-up psychedelic">
+<img src="images/gallery-plectrum.jpeg" alt="Roundel plectrum on Telecaster fretboard">
+<img src="images/gallery-rickenbacker2.jpeg" alt="Rickenbacker bass with Orange amp">
+<img src="images/gallery-studio.jpeg" alt="Royal Target basement studio with Logic Pro">
+<img src="images/gallery-collage.jpg" alt="Royal Target gear collage">
+</div>
 </div>
 </div>
 </section>
