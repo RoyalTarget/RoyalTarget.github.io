@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Target — Indie Pop Music &amp; Photography from Munich</title>
+<meta name="description" content="Royal Target is a Munich-based indie pop solo project. Music influenced by The Smiths, The Cure, Joy Division, and Oasis. Photography, merch, and more.">
+<meta name="keywords" content="Royal Target, indie pop, Munich, music, photography, The Smiths, The Cure, Joy Division, Fender Telecaster, jangle-pop">
+<meta property="og:title" content="Royal Target — Indie Pop Music &amp; Photography">
+<meta property="og:description" content="Munich-based indie pop solo project. Music, photography, and merch.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://royaltarget.de">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Barlow+Condensed:wght@300;400;600;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1444;--deep-navy:#060e30;--red:#e02020;--cream:#f5f0e8;--warm-white:#faf7f2;--aged-gold:#c4a24e;--text-dark:#1a1a1a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow Condensed',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,20,68,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--red);padding:.8rem 2rem;display:flex;justify-content:space-between;align-items:center;transition:padding .3s}
+.nav-logo{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.6rem;color:var(--cream);text-decoration:none;letter-spacing:3px;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.rm{width:30px;height:30px;border-radius:50%;background:var(--navy);border:6px solid var(--navy);position:relative;flex-shrink:0}
+.rm::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#fff}
+.rm::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:var(--red)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:2px;text-transform:uppercase;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--red);transition:width .3s}
+.nav-links a:hover::after{width:100%}.nav-links a:hover{color:var(--red)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
+.hamburger span{width:28px;height:2px;background:var(--cream);transition:all .3s}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;background:var(--deep-navy);overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/header.jpeg') center/cover no-repeat;opacity:.2;filter:contrast(1.3) saturate(.5)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:2rem}
+.roundel{width:280px;height:280px;border-radius:50%;background:var(--navy);position:relative;margin:0 auto 2.5rem;box-shadow:0 0 80px rgba(224,32,32,.15),0 0 160px rgba(10,20,68,.4);animation:rp 4s ease-in-out infinite}
+.roundel::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:180px;height:180px;border-radius:50%;background:var(--warm-white)}
+.roundel::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;border-radius:50%;background:var(--red)}
+@keyframes rp{0%,100%{box-shadow:0 0 80px rgba(224,32,32,.15),0 0 160px rgba(10,20,68,.4)}50%{box-shadow:0 0 100px rgba(224,32,32,.25),0 0 200px rgba(10,20,68,.5)}}
+.hero-title{font-family:'Big Shoulders Display',sans-serif;font-size:5rem;font-weight:900;color:var(--cream);letter-spacing:10px;text-transform:uppercase;margin-bottom:.5rem;text-shadow:4px 4px 0 var(--red)}
+.hero-sub{font-family:'Special Elite',cursive;font-size:1.3rem;color:var(--aged-gold);letter-spacing:4px;margin-bottom:2rem}
+.hero-tag{font-family:'Barlow Condensed',sans-serif;font-size:1rem;color:rgba(245,240,232,.6);letter-spacing:3px;text-transform:uppercase;font-weight:300}
+.scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:var(--cream);opacity:.4;animation:bounce 2s infinite;font-size:1.5rem}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+section{padding:5rem 2rem}
+.st{font-family:'Big Shoulders Display',sans-serif;font-size:3rem;font-weight:900;text-align:center;margin-bottom:1rem;text-transform:uppercase;letter-spacing:5px}
+.sd{width:60px;height:4px;background:var(--red);margin:0 auto 3rem;border-radius:2px}
+.about{background:var(--warm-white)}
+.about-content{max-width:800px;margin:0 auto;text-align:center}
+.about-text{font-size:1.25rem;line-height:1.8;color:#444;font-weight:300;margin-bottom:2rem}
+.about-text strong{color:var(--navy);font-weight:600}
+.pq{background:var(--navy);color:var(--cream);padding:2.5rem 3rem;margin:3rem auto;max-width:700px;position:relative;border-left:5px solid var(--red)}
+.pq::before{content:'\201C';font-family:'Playfair Display',serif;font-size:5rem;color:var(--red);position:absolute;top:-10px;left:15px;line-height:1}
+.pq p{font-family:'Special Elite',cursive;font-size:1.15rem;line-height:1.7;padding-left:1rem}
+.pq cite{display:block;margin-top:1rem;font-family:'Big Shoulders Display',sans-serif;font-style:normal;font-weight:700;color:var(--aged-gold);letter-spacing:2px;text-transform:uppercase;font-size:.9rem;padding-left:1rem}
+.music{background:var(--deep-navy);color:var(--cream)}
+.music .st{color:var(--cream)}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+.sc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:1.8rem;transition:all .3s;position:relative;overflow:hidden;text-decoration:none;color:var(--cream);display:block}
+.sc::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--red);transform:scaleY(0);transition:transform .3s;transform-origin:bottom}
+.sc:hover::before{transform:scaleY(1)}.sc:hover{background:rgba(255,255,255,.08);transform:translateY(-3px)}
+.sy{font-family:'Special Elite',cursive;font-size:.8rem;color:var(--aged-gold);letter-spacing:2px;margin-bottom:.5rem}
+.sn{font-family:'Big Shoulders Display',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:.5rem;letter-spacing:1px}
+.sde{font-size:.95rem;color:rgba(245,240,232,.6);font-weight:300;line-height:1.5}
+.pi{position:absolute;top:1.5rem;right:1.5rem;font-size:1.2rem;opacity:.4;transition:opacity .3s}
+.sc:hover .pi{opacity:1}
+.ml{display:flex;justify-content:center;gap:2rem;margin-top:3rem;flex-wrap:wrap}
+.mlk{display:inline-flex;align-items:center;gap:8px;padding:.8rem 1.8rem;border:2px solid var(--cream);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
+.mlk:hover{background:var(--red);border-color:var(--red)}
+.mlk svg{width:20px;height:20px;fill:currentColor}
+.explore{background:var(--warm-white)}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1000px;margin:0 auto}
+.dc{text-align:center;padding:3rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--text-dark);display:block}
+.dc:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:0 15px 40px rgba(10,20,68,.1)}
+.dc-icon{font-size:3rem;margin-bottom:1.5rem}
+.dc h3{font-family:'Big Shoulders Display',sans-serif;font-size:1.8rem;font-weight:900;text-transform:uppercase;letter-spacing:3px;margin-bottom:1rem}
+.dc p{font-size:1.05rem;color:#666;font-weight:300;line-height:1.6}
+.connect{background:var(--navy);color:var(--cream);text-align:center}
+.connect .st{color:var(--cream)}
+.socg{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:800px;margin:0 auto}
+.sl{display:flex;align-items:center;gap:10px;padding:1rem 2rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:1px;transition:all .3s}
+.sl:hover{background:var(--red);border-color:var(--red);transform:translateY(-2px)}
+.sl svg{width:20px;height:20px;fill:currentColor}
+.lp{display:none;padding:6rem 2rem 4rem;background:var(--warm-white);min-height:100vh}
+.lp.active{display:block}
+.lp h1{font-family:'Big Shoulders Display',sans-serif;font-size:2.5rem;font-weight:900;text-transform:uppercase;letter-spacing:4px;margin-bottom:2rem;text-align:center}
+.lc{max-width:800px;margin:0 auto;font-size:1rem;line-height:1.8;color:#444}
+.lc h2{font-family:'Big Shoulders Display',sans-serif;font-size:1.4rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin:2rem 0 .8rem;color:var(--navy)}
+.lc p{margin-bottom:1rem}.lc a{color:var(--navy)}
+.lb{display:inline-block;margin-top:2rem;padding:.7rem 1.5rem;border:2px solid var(--navy);color:var(--navy);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.9rem;transition:all .3s}
+.lb:hover{background:var(--navy);color:var(--cream)}
+footer{background:var(--deep-navy);color:rgba(245,240,232,.5);text-align:center;padding:2rem;font-size:.85rem;font-weight:300;border-top:2px solid var(--red)}
+footer a{color:rgba(245,240,232,.7);text-decoration:none;margin:0 1rem;transition:color .3s}
+footer a:hover{color:var(--red)}
+.fl{margin-bottom:1rem}
+.fi{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}
+.fi.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){.hero-title{font-size:2.8rem;letter-spacing:4px}.hero-sub{font-size:1rem}.roundel{width:200px;height:200px}.roundel::before{width:130px;height:130px}.roundel::after{width:72px;height:72px}.st{font-size:2.2rem}.dg{grid-template-columns:1fr;gap:1.5rem}.sg{grid-template-columns:1fr}.nav-links{display:none}.hamburger{display:flex}.nav-links.active{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,20,68,.98);padding:1.5rem 2rem;gap:1.2rem}.pq{padding:2rem 1.5rem}.ml{gap:1rem}.mlk{padding:.7rem 1.2rem;font-size:.85rem}}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#" class="nav-logo" onclick="showMain();return false;"><span class="rm"></span>Royal Target</a>
+<button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu"><span></span><span></span><span></span></button>
+<ul class="nav-links">
+<li><a href="#about" onclick="showMain()">About</a></li>
+<li><a href="#music" onclick="showMain()">Music</a></li>
+<li><a href="#explore" onclick="showMain()">Explore</a></li>
+<li><a href="#connect" onclick="showMain()">Connect</a></li>
+</ul>
+</nav>
+
+<main id="mc">
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-content">
+<div class="roundel"></div>
+<h1 class="hero-title">Royal Target</h1>
+<p class="hero-sub">Indie Pop &middot; Photography &middot; Munich</p>
+<p class="hero-tag">The Smiths &middot; The Cure &middot; Joy Division &middot; Oasis &middot; Stone Roses</p>
+</div>
+<div class="scroll-ind">&#9661;</div>
+</section>
+
+<section class="about" id="about">
+<h2 class="st fi">About</h2>
+<div class="sd fi"></div>
+<div class="about-content">
+<p class="about-text fi">To play music is so much fun and allows me to dive into a whole new world and switch off completely. With my songs I try to express things that touch me, and the lyrics and melodies often come up on the sofa, with the guitar in my hand and a cold beer on the table.</p>
+<p class="about-text fi">As a pure music listener over the years, I have been influenced by and cannot deny bands like <strong>The Smiths, The Cure, Joy Division, Pixies, Blur, Oasis, Stone Roses</strong>, and earlier <strong>The Beatles</strong>. I play a <strong>Fender Telecaster</strong>, produce with <strong>Logic Pro X</strong>, and am still in the project stage at the moment &mdash; but maybe Royal Target will become a full band soon.</p>
+<p class="about-text fi">Royal Target also stands for <strong>photography</strong> &mdash; capturing moments, textures, and stories from travels and everyday life. From retro airline memorabilia to Route 66 gas pumps, from Munich streets to the open road.</p>
+<div class="pq fi">
+<p>This Munich based solo project has been something of a regular feature on the Beat The Delete pages, with numerous singles that cover just about every nuance of jangle-pop you can think of. This is the first time he has added jangle to early era The Cure though and he pulls it off with aplomb!</p>
+<cite>Beat The Delete</cite>
+</div>
+</div>
+</section>
+
+<section class="music" id="music">
+<h2 class="st fi">Music</h2>
+<div class="sd fi"></div>
+<div class="sg">
+<a href="https://open.spotify.com/track/2wJzEpzM0EdKCea0LcOXzv" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2024</div><div class="sn">Fear to Fail</div><div class="sde">The latest single</div></a>
+<a href="https://open.spotify.com/track/70ZNMwPRtuVJSyyCDwQK4v" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2022</div><div class="sn">Losing Your Way</div><div class="sde">Inspired by events that shook the foundations of democracy</div></a>
+<a href="https://open.spotify.com/track/14V2cl5MlVf2MtaKZha6rs" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2021</div><div class="sn">I'm Only Sleeping</div><div class="sde">A nod to the classics</div></a>
+<a href="https://open.spotify.com/track/5UKu2T9UwXEkRb76rKelEC" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2021</div><div class="sn">Suddenly</div><div class="sde">Discovering love, carried by a Peter Hook bassline</div></a>
+<a href="https://open.spotify.com/track/5zeMnXrvnJH6cVLtexR74S" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2021</div><div class="sn">The Ocean</div><div class="sde">Drowning in external circumstances, 80s basslines and atmosphere</div></a>
+<a href="https://open.spotify.com/track/1C5swvZeU9D94aTAhvFKCY" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2020</div><div class="sn">Come and See Me</div><div class="sde">An invitation</div></a>
+<a href="https://open.spotify.com/track/5LsAx36mmt5KdA0uS0cYrK" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2020</div><div class="sn">See the Sun</div><div class="sde">Looking for light</div></a>
+<a href="https://open.spotify.com/track/2NaZx0rTkGSfPeVNUYKzAy" target="_blank" rel="noopener" class="sc fi"><span class="pi">&#9654;</span><div class="sy">2020</div><div class="sn">Little World</div><div class="sde">Small stories, big feelings</div></a>
+</div>
+<div class="ml fi">
+<a href="https://open.spotify.com/artist/3mjuUgZMPurmTgMnklN2g3" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>
+<a href="https://royaltarget.bandcamp.com" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg>Bandcamp</a>
+<a href="https://soundcloud.com/smiths1967" target="_blank" rel="noopener" class="mlk">&#9835; SoundCloud</a>
+<a href="https://music.apple.com/artist/royal-target" target="_blank" rel="noopener" class="mlk">&#127925; Apple Music</a>
+</div>
+</section>
+
+<section class="explore" id="explore">
+<h2 class="st fi">Explore</h2>
+<div class="sd fi"></div>
+<div class="dg">
+<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="dc fi"><div class="dc-icon">&#128247;</div><h3>Photography</h3><p>Street scenes, retro finds, travel moments, and the beauty in everyday details. All photos on Instagram.</p></a>
+<a href="https://royaltarget.redbubble.com" target="_blank" rel="noopener" class="dc fi"><div class="dc-icon">&#128085;</div><h3>Merch Shop</h3><p>T-shirts, stickers, posters, mugs and more. Retro airline art, Route 66, street photography, and crypto designs.</p></a>
+</div>
+</section>
+
+<section class="connect" id="connect">
+<h2 class="st fi">Connect</h2>
+<div class="sd fi"></div>
+<div class="socg fi">
+<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
+<a href="https://www.facebook.com/" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+<a href="https://github.com/RoyalTarget/royal-target-song-primer" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
+<a href="https://www.jango.com/music/Royal+Target" target="_blank" rel="noopener" class="sl">&#9654; Jango Radio</a>
+</div>
+</section>
+
+</main>
+
+<!-- IMPRESSUM -->
+<div class="lp" id="imp">
+<h1>Impressum</h1>
+<div class="lc">
+<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+<p>Andr&eacute; Lange<br>Vingerstra&szlig;e 47<br>81375 M&uuml;nchen<br>Deutschland</p>
+<h2>Kontakt</h2>
+<p>Telefon: +49 176 62786503<br>E-Mail: info@royaltarget.de</p>
+<h2>Umsatzsteuer</h2>
+<p>Gem&auml;&szlig; &sect; 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
+<h2>Verantwortlich f&uuml;r den Inhalt nach &sect; 55 Abs. 2 RSt V</h2>
+<p>Andr&eacute; Lange<br>Vingerstra&szlig;e 47<br>81375 M&uuml;nchen</p>
+<h2>Haftungsausschluss</h2>
+<p>Trotz sorgf&auml;ltiger inhaltlicher Kontrolle &uuml;bernehmen wir keine Haftung f&uuml;r die Inhalte externer Links. F&uuml;r den Inhalt der verlinkten Seiten sind ausschlie&szlig;lich deren Betreiber verantwortlich.</p>
+<h2>Urheberrecht</h2>
+<p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechts bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Alle Fotografien auf dieser Website sind Eigentum von Andr&eacute; Lange / Royal Target.</p>
+<a href="#" class="lb" onclick="showMain();return false;">&larr; Back to Homepage</a>
+</div>
+</div>
+
+<!-- DATENSCHUTZ -->
+<div class="lp" id="dse">
+<h1>Datenschutzerkl&auml;rung</h1>
+<div class="lc">
+<h2>1. Datenschutz auf einen Blick</h2>
+<p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+<h2>2. Verantwortlicher</h2>
+<p>Andr&eacute; Lange<br>Vingerstra&szlig;e 47<br>81375 M&uuml;nchen<br>E-Mail: info@royaltarget.de</p>
+<h2>3. Hosting</h2>
+<p>Diese Website wird bei IONOS (1&amp;1 IONOS SE, Elgendorfer Str. 57, 56410 Montabaur) gehostet. Details entnehmen Sie der Datenschutzerkl&auml;rung von IONOS: <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" rel="noopener">ionos.de/datenschutzerklaerung</a></p>
+<h2>4. Allgemeine Hinweise</h2>
+<p>Der Betreiber dieser Seiten nimmt den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl&auml;rung.</p>
+<h2>5. Datenerfassung auf dieser Website</h2>
+<p><strong>Server-Log-Dateien:</strong> Der Provider erhebt und speichert automatisch Informationen in Server-Log-Dateien, die Ihr Browser &uuml;bermittelt: Browsertyp/-version, Betriebssystem, Referrer URL, Hostname, Uhrzeit und IP-Adresse. Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+<h2>6. Externe Dienste und Inhalte</h2>
+<p><strong>Google Fonts:</strong> Diese Seite nutzt Google Fonts zur einheitlichen Schriftdarstellung. Beim Seitenaufruf l&auml;dt Ihr Browser die ben&ouml;tigten Fonts von Google-Servern. Anbieter: Google Ireland Limited, Dublin 4, Irland.</p>
+<p><strong>Spotify:</strong> Auf dieser Website sind Inhalte von Spotify eingebunden. Anbieter: Spotify AB, Regeringsgatan 19, SE-111 53 Stockholm, Schweden. <a href="https://www.spotify.com/de/legal/privacy-policy/" target="_blank" rel="noopener">Spotify Datenschutz</a></p>
+<p><strong>YouTube:</strong> Diese Website nutzt Plugins von YouTube. Betreiber: Google Ireland Limited, Dublin 4, Irland.</p>
+<p><strong>Instagram:</strong> Inhalte von Instagram werden eingebunden. Anbieter: Meta Platforms Ireland Limited, Dublin 2, Irland.</p>
+<p><strong>Bandcamp:</strong> Inhalte von Bandcamp werden eingebunden. Anbieter: Songtradr, Inc.</p>
+<p><strong>SoundCloud:</strong> Plugins von SoundCloud werden eingebunden. Anbieter: SoundCloud Global Limited &amp; Co. KG, Berlin.</p>
+<h2>7. Links zu externen Websites</h2>
+<p>Diese Website enth&auml;lt Links zu externen Websites (u.a. Redbubble, Jango Radio, Facebook, GitHub). Beim Klick verlassen Sie unsere Website. Wir haben keinen Einfluss auf die Datenschutzvorschriften externer Seiten.</p>
+<h2>8. Ihre Rechte</h2>
+<p>Sie haben jederzeit das Recht auf Auskunft &uuml;ber Ihre gespeicherten Daten, deren Herkunft und Empf&auml;nger sowie den Zweck der Datenverarbeitung, und ein Recht auf Berichtigung, Sperrung oder L&ouml;schung. Kontakt: siehe oben.</p>
+<p><em>Hinweis: Diese Datenschutzerkl&auml;rung ist ein Entwurf. Vor dem Live-Gang sollte sie durch einen rechtssicheren Generator (z.B. eRecht24, IT-Recht Kanzlei M&uuml;nchen) erzeugt oder von einem Anwalt gepr&uuml;ft werden.</em></p>
+<a href="#" class="lb" onclick="showMain();return false;">&larr; Back to Homepage</a>
+</div>
+</div>
+
+<footer>
+<div class="fl">
+<a href="#" onclick="showLegal('imp');return false;">Impressum</a>
+<a href="#" onclick="showLegal('dse');return false;">Datenschutz</a>
+</div>
+<p>&copy; 2026 Royal Target &middot; Andr&eacute; Lange &middot; Munich, Germany &middot; royaltarget.de</p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.padding=window.scrollY>50?'.5rem 2rem':'.8rem 2rem'});
+function showLegal(id){document.getElementById('mc').style.display='none';document.querySelectorAll('.lp').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);document.querySelector('.nav-links').classList.remove('active')}
+function showMain(){document.getElementById('mc').style.display='block';document.querySelectorAll('.lp').forEach(p=>p.classList.remove('active'));document.querySelector('.nav-links').classList.remove('active')}
+</script>
+</body>
+</html>
