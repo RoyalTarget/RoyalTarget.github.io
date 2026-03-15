@@ -110,7 +110,7 @@ section{padding:5rem 2rem}
 .wip-lyrics p{color:rgba(245,240,232,.7);font-family:'Barlow Condensed',sans-serif;font-size:1rem;line-height:1.8;font-weight:300;margin-bottom:.3rem}
 .wip-lyrics .chord{color:var(--aged-gold);font-family:'Special Elite',cursive;font-size:.85rem;margin-bottom:0;margin-top:.8rem}
 .wip-lyrics .section{color:var(--red);font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;margin-top:1.2rem;margin-bottom:.3rem}
-@media(max-width:768px){.sticker-board{min-height:auto;display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;padding:1rem}.sticker{position:relative!important;transform:rotate(0deg)!important;width:45%!important;height:auto!important}.sticker img{height:auto}}
+@media(max-width:768px){.sticker-board{min-height:auto;display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:1rem}.sticker{position:relative!important;transform:rotate(0deg)!important;width:100%!important;height:auto!important;aspect-ratio:1}.sticker img{height:100%}.sticker.contain img{object-fit:contain}}
 .dg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1000px;margin:0 auto}
 .dc{text-align:center;padding:4rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--cream);display:block;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:center;align-items:center}
 .dc-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.35);transition:filter .4s}
