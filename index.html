@@ -73,11 +73,13 @@ section{padding:5rem 2rem}
 .mlk svg{width:20px;height:20px;fill:currentColor}
 .explore{background:var(--warm-white)}
 .dg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1000px;margin:0 auto}
-.dc{text-align:center;padding:3rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--text-dark);display:block}
-.dc:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:0 15px 40px rgba(10,20,68,.1)}
-.dc-icon{font-size:3rem;margin-bottom:1.5rem}
-.dc h3{font-family:'Big Shoulders Display',sans-serif;font-size:1.8rem;font-weight:900;text-transform:uppercase;letter-spacing:3px;margin-bottom:1rem}
-.dc p{font-size:1.05rem;color:#666;font-weight:300;line-height:1.6}
+.dc{text-align:center;padding:4rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--cream);display:block;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.dc-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.35);transition:filter .4s}
+.dc:hover .dc-bg{filter:brightness(.45)}
+.dc:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:0 15px 40px rgba(10,20,68,.2)}
+.dc-icon{font-size:3rem;margin-bottom:1.5rem;position:relative;z-index:2}
+.dc h3{font-family:'Big Shoulders Display',sans-serif;font-size:1.8rem;font-weight:900;text-transform:uppercase;letter-spacing:3px;margin-bottom:1rem;position:relative;z-index:2;text-shadow:2px 2px 4px rgba(0,0,0,.5)}
+.dc p{font-size:1.05rem;color:rgba(245,240,232,.8);font-weight:300;line-height:1.6;position:relative;z-index:2}
 .connect{background:var(--navy);color:var(--cream);text-align:center}
 .connect .st{color:var(--cream)}
 .socg{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:800px;margin:0 auto}
@@ -166,8 +168,8 @@ footer a:hover{color:var(--red)}
 <h2 class="st fi">Explore</h2>
 <div class="sd fi"></div>
 <div class="dg">
-<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="dc fi"><div class="dc-icon">&#128247;</div><h3>Photography</h3><p>Street scenes, retro finds, travel moments, and the beauty in everyday details. All photos on Instagram.</p></a>
-<a href="https://royaltarget.redbubble.com" target="_blank" rel="noopener" class="dc fi"><div class="dc-icon">&#128085;</div><h3>Merch Shop</h3><p>T-shirts, stickers, posters, mugs and more. Retro airline art, Route 66, street photography, and crypto designs.</p></a>
+<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="dc fi"><div class="dc-bg" style="background-image:url('images/explore-photo.jpeg')"></div><div class="dc-icon">&#128247;</div><h3>Photography</h3><p>Street scenes, retro finds, travel moments, and the beauty in everyday details. All photos on Instagram.</p></a>
+<a href="https://royaltarget.redbubble.com" target="_blank" rel="noopener" class="dc fi"><div class="dc-bg" style="background-image:url('images/explore-merch.jpg')"></div><div class="dc-icon">&#128085;</div><h3>Merch Shop</h3><p>T-shirts, stickers, posters, mugs and more. Retro airline art, Route 66, street photography, and crypto designs.</p></a>
 </div>
 </section>
 
