@@ -111,16 +111,17 @@ section{padding:5rem 2rem}
 .wip-lyrics .chord{color:var(--aged-gold);font-family:'Special Elite',cursive;font-size:.85rem;margin-bottom:0;margin-top:.8rem}
 .wip-lyrics .section{color:var(--red);font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;margin-top:1.2rem;margin-bottom:.3rem}
 @media(max-width:768px){.sticker-board{min-height:auto;display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:1rem}.sticker{position:relative!important;transform:rotate(0deg)!important;width:100%!important;height:auto!important;aspect-ratio:1}.sticker img{height:100%}.sticker.contain img{object-fit:contain}}
-.dg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto}
-.dc{text-align:center;padding:4rem 2rem;border:2px solid var(--navy);transition:all .3s;text-decoration:none;color:var(--cream);display:block;position:relative;overflow:hidden;min-height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center}
-.dc-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.35);transition:filter .4s,opacity 1.5s}
-.dc:hover .dc-bg{filter:brightness(.45)}
-.dc:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:0 15px 40px rgba(10,20,68,.2)}
-.dc-icon{font-size:3rem;margin-bottom:1.5rem;position:relative;z-index:2}
-.dc h3{font-family:'Big Shoulders Display',sans-serif;font-size:1.8rem;font-weight:900;text-transform:uppercase;letter-spacing:3px;margin-bottom:1rem;position:relative;z-index:2;text-shadow:2px 2px 4px rgba(0,0,0,.5)}
-.dc p{font-size:1.05rem;color:rgba(245,240,232,.8);font-weight:300;line-height:1.6;position:relative;z-index:2}
-.dc-bg.fade-out{opacity:0}
-.dc-bg.fade-in{opacity:1}
+.fullsec{position:relative;overflow:hidden;min-height:500px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 2rem}
+.fullsec-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.25);transition:opacity 1.5s;z-index:0}
+.fullsec-bg.fade-out{opacity:0}
+.fullsec-bg.fade-in{opacity:1}
+.fullsec .st{color:var(--cream);position:relative;z-index:2}
+.fullsec .sd{position:relative;z-index:2}
+.fullsec-icon{font-size:3.5rem;position:relative;z-index:2;margin-bottom:1rem}
+.fullsec-text{font-size:1.15rem;color:rgba(245,240,232,.8);font-weight:300;line-height:1.8;max-width:600px;position:relative;z-index:2;margin-bottom:2rem}
+.fullsec-btn{display:inline-block;padding:1rem 2.5rem;border:2px solid var(--cream);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:3px;text-transform:uppercase;transition:all .3s;position:relative;z-index:2}
+.fullsec-btn:hover{background:var(--red);border-color:var(--red);transform:translateY(-3px)}
+@media(max-width:768px){.fullsec{min-height:400px;padding:4rem 1.5rem}}
 .press{background:var(--deep-navy);text-align:center}
 .press .st{color:var(--cream)}
 .press-grid{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:2.5rem}
@@ -129,7 +130,7 @@ section{padding:5rem 2rem}
 .press-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:rgba(245,240,232,.85);line-height:1.8;margin-bottom:1rem}
 .press-quote cite{font-family:'Big Shoulders Display',sans-serif;font-style:normal;font-weight:700;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;color:var(--aged-gold)}
 .press-quote .press-song{font-family:'Barlow Condensed',sans-serif;font-weight:300;font-size:.85rem;color:rgba(245,240,232,.5);margin-left:1rem}
-@media(max-width:768px){.dg{grid-template-columns:1fr;gap:2rem}.press-quote{padding:1.5rem}}
+@media(max-width:768px){.press-quote{padding:1.5rem}}
 .connect{background:var(--navy);color:var(--cream);text-align:center}
 .connect .st{color:var(--cream)}
 .socg{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:800px;margin:0 auto}
@@ -162,7 +163,8 @@ footer a:hover{color:var(--red)}
 <li><a href="#about" onclick="showMain()">About</a></li>
 <li><a href="#music" onclick="showMain()">Music</a></li>
 <li><a href="#wip" onclick="showMain()">WIP</a></li>
-<li><a href="#explore" onclick="showMain()">Explore</a></li>
+<li><a href="#photos" onclick="showMain()">Photos</a></li>
+<li><a href="#merch" onclick="showMain()">Merch</a></li>
 <li><a href="#press" onclick="showMain()">Press</a></li>
 <li><a href="#connect" onclick="showMain()">Connect</a></li>
 </ul>
@@ -353,24 +355,23 @@ footer a:hover{color:var(--red)}
 </div>
 </section>
 
-<section class="explore" id="explore">
-<h2 class="st fi">Explore</h2>
+<section class="fullsec" id="photos">
+<div class="fullsec-bg fade-in" id="photoBg1" style="background-image:url('images/explore-photo-1.jpeg')"></div>
+<div class="fullsec-bg fade-out" id="photoBg2" style="background-image:url('images/explore-photo-2.jpeg')"></div>
+<h2 class="st fi">Photography</h2>
 <div class="sd fi"></div>
-<div class="dg">
-<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="dc fi" id="photoCard">
-<div class="dc-bg fade-in" id="photoBg1" style="background-image:url('images/explore-photo-1.jpeg')"></div>
-<div class="dc-bg fade-out" id="photoBg2" style="background-image:url('images/explore-photo-2.jpeg')"></div>
-<div class="dc-icon">&#128247;</div>
-<h3>Photography</h3>
-<p>Street scenes, retro finds, travel moments, and the beauty in everyday details. UK seaside, Route 66, and everywhere in between.</p>
-</a>
-<a href="https://royaltarget.redbubble.com" target="_blank" rel="noopener" class="dc fi">
-<div class="dc-bg" style="background-image:url('images/explore-merch-new.jpeg')"></div>
-<div class="dc-icon">&#128085;</div>
-<h3>Merch Shop</h3>
-<p>T-shirts, stickers, posters, mugs and more. Retro airline art, Route 66, street photography, and crypto designs.</p>
-</a>
-</div>
+<div class="fullsec-icon fi">&#128247;</div>
+<p class="fullsec-text fi">Street scenes, retro finds, travel moments, and the beauty in everyday details. UK seaside towns, Route 66 motels, and everywhere in between.</p>
+<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="fullsec-btn fi">View on Instagram</a>
+</section>
+
+<section class="fullsec" id="merch">
+<div class="fullsec-bg" style="background-image:url('images/explore-merch-new.jpeg')"></div>
+<h2 class="st fi">Merch Shop</h2>
+<div class="sd fi"></div>
+<div class="fullsec-icon fi">&#128085;</div>
+<p class="fullsec-text fi">T-shirts, stickers, posters, mugs and more. Retro airline art, Route 66, street photography, and crypto designs — all available on Redbubble.</p>
+<a href="https://royaltarget.redbubble.com" target="_blank" rel="noopener" class="fullsec-btn fi">Visit Redbubble Store</a>
 </section>
 
 <section class="press" id="press">
@@ -378,12 +379,24 @@ footer a:hover{color:var(--red)}
 <div class="sd fi"></div>
 <div class="press-grid">
 <div class="press-quote fi">
-<p>This Munich based solo project has been something of a regular feature on the Beat The Delete pages, with numerous singles that cover just about every nuance of jangle-pop you can think of. This is the first time he has added jangle to early era The Cure though and he pulls it off with aplomb!</p>
-<cite>Beat The Delete</cite><span class="press-song">on I'm Only Sleeping</span>
+<p>I feel like this track from Royal Target just made my Monday all come together; it's the perfect brand of bouncing post-punk, the sort that New Order made around the Republic area. I spent all morning listening to this on headphones, which is where these little details begin to reveal themselves, giving the song its own personality, beyond just a mirror of influences.</p>
+<cite>Beat The Delete</cite><span class="press-song">on Suddenly</span>
 </div>
 <div class="press-quote fi">
-<p>More reviews coming soon&hellip;</p>
-<cite>Watch this space</cite>
+<p>Royal Target hadn't previously been on my radar, but with this delicious new single, they're definitely a group I need to keep an ear out for. The guitars turn over and over carefully, seemingly frolicking in step with the precision drum work. Perhaps one of my favorite things to stumble upon in the last few weeks.</p>
+<cite>Austin Town Hall</cite><span class="press-song">on Leave Her</span>
+</div>
+<div class="press-quote fi">
+<p>This Munich based solo project has been something of a regular feature on the Beat The Delete pages, with numerous singles that cover just about every nuance of jangle-pop you can think of. This is the first time he has added jangle to early era The Cure though and he pulls it off with aplomb!</p>
+<cite>Beat The Delete</cite><span class="press-song">on Losing Your Way</span>
+</div>
+<div class="press-quote fi">
+<p>This Munich based act has been a regular on Beat The Delete pages, incessantly releasing singles that cover all manner of jangly stylistics. This is perhaps the first time he has ventured into a slightly more 80s, dreamy, chiming aesthetic though and one that is made all the more perfect with the Peter Hook bassline core.</p>
+<cite>Beat The Delete</cite><span class="press-song">on Suddenly</span>
+</div>
+<div class="press-quote fi">
+<p>I love the way the guitars turn over and over, playing between that gentle jangle and circular pop swirl that's so enticing. It almost has this subversive nature in its subtlety, creeping inside your brain and hitting all those emotional sensory notes that make a tune memorable.</p>
+<cite>Beat The Delete</cite><span class="press-song">on Sitting Alone</span>
 </div>
 </div>
 </section>
