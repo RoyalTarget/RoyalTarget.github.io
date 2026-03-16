@@ -11,10 +11,22 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://royaltarget.de">
 <meta property="og:image" content="https://royaltarget.de/images/og-image.jpeg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Barlow+Condensed:wght@300;400;600;700&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
+/* === LOCAL FONTS (DSGVO-konform, keine externen Anfragen) === */
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/big-shoulders-display-v4-latin-500.woff2') format('woff2')}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/big-shoulders-display-v4-latin-600.woff2') format('woff2')}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/big-shoulders-display-v4-latin-700.woff2') format('woff2')}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/big-shoulders-display-v4-latin-800.woff2') format('woff2')}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:900;font-display:swap;src:url('fonts/big-shoulders-display-v4-latin-900.woff2') format('woff2')}
+@font-face{font-family:'Big Shoulders Display';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/big-shoulders-display-v4-latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/barlow-condensed-v13-latin-300.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/barlow-condensed-v13-latin-600.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/barlow-condensed-v13-latin-700.woff2') format('woff2')}
+@font-face{font-family:'Special Elite';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/special-elite-v20-latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/playfair-display-v40-latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/playfair-display-v40-latin-700.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/playfair-display-v40-latin-italic.woff2') format('woff2')}
 :root{--navy:#0a1444;--deep-navy:#060e30;--red:#e02020;--cream:#f5f0e8;--warm-white:#faf7f2;--aged-gold:#c4a24e;--text-dark:#1a1a1a}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -422,7 +434,7 @@ footer a:hover{color:var(--red)}
 <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
 <p>Andr&eacute; Lange<br>Vingerstra&szlig;e 47<br>81375 M&uuml;nchen<br>Deutschland</p>
 <h2>Kontakt</h2>
-<p>Telefon: +49 176 62786503<br>E-Mail: info@royaltarget.de</p>
+<p>Telefon: +49 176 62786503<br>E-Mail: <a href="mailto:info@royaltarget.de">info@royaltarget.de</a></p>
 <h2>Umsatzsteuer</h2>
 <p>Gem&auml;&szlig; &sect; 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
 <h2>Verantwortlich f&uuml;r den Inhalt nach &sect; 55 Abs. 2 RSt V</h2>
@@ -439,28 +451,55 @@ footer a:hover{color:var(--red)}
 <div class="lp" id="dse">
 <h1>Datenschutzerkl&auml;rung</h1>
 <div class="lc">
+
 <h2>1. Datenschutz auf einen Blick</h2>
-<p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+<p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie der nachfolgenden Datenschutzerkl&auml;rung.</p>
+
 <h2>2. Verantwortlicher</h2>
-<p>Andr&eacute; Lange<br>Vingerstra&szlig;e 47<br>81375 M&uuml;nchen<br>E-Mail: info@royaltarget.de</p>
+<p>Andr&eacute; Lange<br>Vingerstra&szlig;e 47<br>81375 M&uuml;nchen<br>Deutschland<br>E-Mail: info@royaltarget.de</p>
+<p>Der Verantwortliche entscheidet allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten.</p>
+
 <h2>3. Hosting</h2>
-<p>Diese Website wird bei IONOS (1&amp;1 IONOS SE, Elgendorfer Str. 57, 56410 Montabaur) gehostet. Details entnehmen Sie der Datenschutzerkl&auml;rung von IONOS: <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" rel="noopener">ionos.de/datenschutzerklaerung</a></p>
-<h2>4. Allgemeine Hinweise</h2>
+<p>Diese Website wird &uuml;ber <strong>GitHub Pages</strong> gehostet, einen Dienst der GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA (ein Unternehmen der Microsoft Corporation). Beim Besuch dieser Website erhebt GitHub automatisch verschiedene Server-Logdaten, darunter Ihre IP-Adresse. N&auml;here Informationen finden Sie in der Datenschutzerkl&auml;rung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+<p>Die Domain <strong>royaltarget.de</strong> wird &uuml;ber IONOS (1&amp;1 IONOS SE, Elgendorfer Str. 57, 56410 Montabaur) verwaltet. IONOS stellt lediglich die DNS-Verwaltung bereit; das Hosting der Website-Inhalte erfolgt &uuml;ber GitHub Pages.</p>
+<p>GitHub Pages ist ein Dienst mit Serverstandorten in den USA. Die Daten&uuml;bermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Framework (DPF), dem Microsoft/GitHub beigetreten ist. Weitere Informationen: <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener">dataprivacyframework.gov</a>.</p>
+
+<h2>4. Allgemeine Hinweise und Pflichtinformationen</h2>
 <p>Der Betreiber dieser Seiten nimmt den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl&auml;rung.</p>
+<p>Die Nutzung dieser Website ist in der Regel ohne Angabe personenbezogener Daten m&ouml;glich. Es werden keine Cookies gesetzt, keine Analysetools eingesetzt und kein Tracking durchgef&uuml;hrt. Ein Cookie-Consent-Tool ist daher nicht erforderlich.</p>
+<p>Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
+
 <h2>5. Datenerfassung auf dieser Website</h2>
-<p><strong>Server-Log-Dateien:</strong> Der Provider erhebt und speichert automatisch Informationen in Server-Log-Dateien, die Ihr Browser &uuml;bermittelt: Browsertyp/-version, Betriebssystem, Referrer URL, Hostname, Uhrzeit und IP-Adresse. Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
-<h2>6. Externe Dienste und Inhalte</h2>
-<p><strong>Google Fonts:</strong> Diese Seite nutzt Google Fonts zur einheitlichen Schriftdarstellung. Beim Seitenaufruf l&auml;dt Ihr Browser die ben&ouml;tigten Fonts von Google-Servern. Anbieter: Google Ireland Limited, Dublin 4, Irland.</p>
-<p><strong>Spotify:</strong> Auf dieser Website sind Inhalte von Spotify eingebunden. Anbieter: Spotify AB, Regeringsgatan 19, SE-111 53 Stockholm, Schweden. <a href="https://www.spotify.com/de/legal/privacy-policy/" target="_blank" rel="noopener">Spotify Datenschutz</a></p>
-<p><strong>YouTube:</strong> Diese Website nutzt Plugins von YouTube. Betreiber: Google Ireland Limited, Dublin 4, Irland.</p>
-<p><strong>Instagram:</strong> Inhalte von Instagram werden eingebunden. Anbieter: Meta Platforms Ireland Limited, Dublin 2, Irland.</p>
-<p><strong>Bandcamp:</strong> Inhalte von Bandcamp werden eingebunden. Anbieter: Songtradr, Inc.</p>
-<p><strong>SoundCloud:</strong> Plugins von SoundCloud werden eingebunden. Anbieter: SoundCloud Global Limited &amp; Co. KG, Berlin.</p>
-<h2>7. Links zu externen Websites</h2>
-<p>Diese Website enth&auml;lt Links zu externen Websites (u.a. Redbubble, Jango Radio, Facebook, GitHub). Beim Klick verlassen Sie unsere Website. Wir haben keinen Einfluss auf die Datenschutzvorschriften externer Seiten.</p>
-<h2>8. Ihre Rechte</h2>
-<p>Sie haben jederzeit das Recht auf Auskunft &uuml;ber Ihre gespeicherten Daten, deren Herkunft und Empf&auml;nger sowie den Zweck der Datenverarbeitung, und ein Recht auf Berichtigung, Sperrung oder L&ouml;schung. Kontakt: siehe oben.</p>
-<p><em>Hinweis: Diese Datenschutzerkl&auml;rung ist ein Entwurf. Vor dem Live-Gang sollte sie durch einen rechtssicheren Generator (z.B. eRecht24, IT-Recht Kanzlei M&uuml;nchen) erzeugt oder von einem Anwalt gepr&uuml;ft werden.</em></p>
+<p><strong>Server-Log-Dateien:</strong> Der Hosting-Anbieter (GitHub Pages) erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch &uuml;bermittelt. Dies sind:</p>
+<p>&bull; Browsertyp und Browserversion<br>&bull; Verwendetes Betriebssystem<br>&bull; Referrer URL (die zuvor besuchte Seite)<br>&bull; Hostname des zugreifenden Rechners<br>&bull; Uhrzeit der Serveranfrage<br>&bull; IP-Adresse</p>
+<p>Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und Optimierung seiner Website.</p>
+
+<h2>6. Schriftarten</h2>
+<p>Diese Website verwendet <strong>lokal eingebundene Schriftarten</strong> (Self-Hosting). Die Schriftart-Dateien liegen auf dem eigenen Server bzw. im GitHub-Repository. Beim Laden der Schriftarten wird <strong>keine Verbindung zu externen Servern</strong> (wie z.&nbsp;B. Google) hergestellt. Es werden keine Daten an Dritte &uuml;bertragen.</p>
+
+<h2>7. Externe Links und eingebettete Inhalte</h2>
+<p>Diese Website enth&auml;lt Links zu externen Diensten und Plattformen. Beim Klick auf diese Links verlassen Sie unsere Website. Erst dann k&ouml;nnen die jeweiligen Anbieter Daten erheben. Wir haben keinen Einfluss auf die Datenverarbeitung durch diese Anbieter. Es werden <strong>keine Inhalte von Drittanbietern automatisch eingebettet</strong> (keine iFrames, keine externen Widgets oder Player).</p>
+<p>Folgende externe Plattformen werden verlinkt:</p>
+<p><strong>Apple Music / Spotify / Bandcamp / SoundCloud:</strong> Links zu Musik-Plattformen. Erst beim Klick gelangen Sie auf die jeweilige Plattform und deren Datenschutzbestimmungen gelten.</p>
+<p><strong>Instagram (Meta):</strong> Links zu Instagram-Profilen. Anbieter: Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland. <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener">Instagram Datenschutzrichtlinie</a>.</p>
+<p><strong>YouTube (Google):</strong> Links zu YouTube-Videos. Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerkl&auml;rung</a>.</p>
+<p><strong>Redbubble:</strong> Links zum Merch-Shop. Anbieter: Redbubble Ltd, Melbourne, Australien. <a href="https://www.redbubble.com/de/privacy" target="_blank" rel="noopener">Redbubble Datenschutz</a>.</p>
+<p><strong>GitHub:</strong> Links zu &ouml;ffentlichen Repositories. Anbieter: GitHub, Inc., San Francisco, USA (Microsoft Corporation). <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Datenschutz</a>.</p>
+<p><strong>Facebook:</strong> Links zum Facebook-Profil. Anbieter: Meta Platforms Ireland Limited, Dublin, Irland. <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">Facebook Datenschutzrichtlinie</a>.</p>
+
+<h2>8. E-Mail-Kontakt</h2>
+<p>Wenn Sie uns per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, E-Mail-Adresse, Inhalt der Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung erfolgt auf Grundlage von Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO (Vertragsanbahnung) oder Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO (berechtigtes Interesse).</p>
+
+<h2>9. Ihre Rechte als betroffene Person</h2>
+<p>Sie haben gegen&uuml;ber dem Verantwortlichen folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
+<p>&bull; <strong>Recht auf Auskunft</strong> (Art.&nbsp;15 DSGVO)<br>&bull; <strong>Recht auf Berichtigung</strong> (Art.&nbsp;16 DSGVO)<br>&bull; <strong>Recht auf L&ouml;schung</strong> (Art.&nbsp;17 DSGVO)<br>&bull; <strong>Recht auf Einschr&auml;nkung der Verarbeitung</strong> (Art.&nbsp;18 DSGVO)<br>&bull; <strong>Recht auf Daten&uuml;bertragbarkeit</strong> (Art.&nbsp;20 DSGVO)<br>&bull; <strong>Recht auf Widerspruch</strong> (Art.&nbsp;21 DSGVO)</p>
+<p>Zur Aus&uuml;bung Ihrer Rechte wenden Sie sich bitte an: info@royaltarget.de</p>
+
+<h2>10. Beschwerderecht bei einer Aufsichtsbeh&ouml;rde</h2>
+<p>Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbeh&ouml;rde zu, insbesondere in dem Mitgliedstaat Ihres gew&ouml;hnlichen Aufenthaltsorts, Ihres Arbeitsplatzes oder des Orts des mutma&szlig;lichen Versto&szlig;es.</p>
+<p>Die zust&auml;ndige Aufsichtsbeh&ouml;rde ist:<br>Bayerisches Landesamt f&uuml;r Datenschutzaufsicht (BayLDA)<br>Promenade 18, 91522 Ansbach<br><a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a></p>
+
+<p><em>Stand: M&auml;rz 2026</em></p>
 <a href="#" class="lb" onclick="showMain();return false;">&larr; Back to Homepage</a>
 </div>
 </div>
@@ -490,7 +529,4 @@ if(lyricsId){var lEl=document.getElementById(lyricsId);if(lEl){html+='<div class
 c.innerHTML=html;
 o.classList.add('active');document.body.style.overflow='hidden'}
 function closeWipPlayer(){var o=document.getElementById('wipPlayer');o.classList.remove('active');document.getElementById('wipPlayerContent').innerHTML='';document.body.style.overflow=''}
-(function(){var bg1=document.getElementById('photoBg1'),bg2=document.getElementById('photoBg2'),show1=true;if(bg1&&bg2){setInterval(function(){if(show1){bg1.classList.remove('fade-in');bg1.classList.add('fade-out');bg2.classList.remove('fade-out');bg2.classList.add('fade-in')}else{bg2.classList.remove('fade-in');bg2.classList.add('fade-out');bg1.classList.remove('fade-out');bg1.classList.add('fade-in')}show1=!show1},5000)}})()
-</script>
-</body>
-</html>
+(function(){var bg1=document.getElementById('photoBg1'),bg2=document.getElementById('photoBg2'),show1=tru
