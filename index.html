@@ -99,7 +99,7 @@ section{padding:5rem 2rem}
 @media(max-width:768px){.album-link{flex-direction:column}.album-cover{width:100%;height:auto}}
 .explore{background:var(--warm-white)}
 .wip{position:relative;overflow:hidden;min-height:700px}
-.wip-bg{position:absolute;inset:0;background:url('images/gallery-studio.jpeg') center/cover no-repeat;filter:brightness(.3);z-index:0}
+.wip-bg{position:absolute;inset:0;background:url('images/gallery-studio.jpeg') center/cover no-repeat;filter:brightness(.4);z-index:0}
 .wip .st{color:var(--cream);position:relative;z-index:2}
 .wip .sd{position:relative;z-index:2}
 .wip-sub{text-align:center;color:var(--aged-gold);font-family:'Special Elite',cursive;font-size:1.1rem;margin-top:-2rem;margin-bottom:2rem;position:relative;z-index:2}
@@ -124,7 +124,7 @@ section{padding:5rem 2rem}
 .wip-lyrics .section{color:var(--red);font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:2px;text-transform:uppercase;margin-top:1.2rem;margin-bottom:.3rem}
 @media(max-width:768px){.sticker-board{min-height:auto;display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:1rem}.sticker{position:relative!important;transform:rotate(0deg)!important;width:100%!important;height:auto!important;aspect-ratio:1}.sticker img{height:100%}.sticker.contain img{object-fit:contain}}
 .fullsec{position:relative;overflow:hidden;min-height:500px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 2rem}
-.fullsec-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.25);transition:opacity 1.5s;z-index:0}
+.fullsec-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.4);transition:opacity 1.5s;z-index:0}
 .fullsec-bg.fade-out{opacity:0}
 .fullsec-bg.fade-in{opacity:1}
 .fullsec .st{color:var(--cream);position:relative;z-index:2}
@@ -134,9 +134,11 @@ section{padding:5rem 2rem}
 .fullsec-btn{display:inline-block;padding:1rem 2.5rem;border:2px solid var(--cream);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:3px;text-transform:uppercase;transition:all .3s;position:relative;z-index:2}
 .fullsec-btn:hover{background:var(--red);border-color:var(--red);transform:translateY(-3px)}
 @media(max-width:768px){.fullsec{min-height:400px;padding:4rem 1.5rem}}
-.press{background:var(--deep-navy);text-align:center}
-.press .st{color:var(--cream)}
-.press-grid{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:2.5rem}
+.press{position:relative;overflow:hidden;text-align:center;padding:5rem 2rem}
+.press-bg{position:absolute;inset:0;background:url('images/press-bg.jpeg') center/cover no-repeat;filter:brightness(.35);z-index:0}
+.press .st{color:var(--cream);position:relative;z-index:2}
+.press .sd{position:relative;z-index:2}
+.press-grid{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:2.5rem;position:relative;z-index:2}
 .press-quote{background:rgba(255,255,255,.04);border-left:4px solid var(--red);padding:2rem 2.5rem;text-align:left;transition:all .3s}
 .press-quote:hover{background:rgba(255,255,255,.07);transform:translateX(5px)}
 .press-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:rgba(245,240,232,.85);line-height:1.8;margin-bottom:1rem}
@@ -387,6 +389,7 @@ footer a:hover{color:var(--red)}
 </section>
 
 <section class="press" id="press">
+<div class="press-bg"></div>
 <h2 class="st fi">Press</h2>
 <div class="sd fi"></div>
 <div class="press-grid">
