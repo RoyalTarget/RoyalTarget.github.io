@@ -516,4 +516,9 @@ if(lyricsId){var lEl=document.getElementById(lyricsId);if(lEl){html+='<div class
 c.innerHTML=html;
 o.classList.add('active');document.body.style.overflow='hidden'}
 function closeWipPlayer(){var o=document.getElementById('wipPlayer');o.classList.remove('active');document.getElementById('wipPlayerContent').innerHTML='';document.body.style.overflow=''}
-(function(){var bg1=document.getElementById('photoBg1'),bg2=document.getElementById('photoBg2'),show1=tru
+(function(){var bg1=document.getElementById('photoBg1'),bg2=document.getElementById('photoBg2'),show1=true;if(bg1&&bg2){setInterval(function(){if(show1){bg1.classList.remove('fade-in');bg1.classList.add('fade-out');bg2.classList.remove('fade-out');bg2.classList.add('fade-in')}else{bg2.classList.remove('fade-in');bg2.classList.add('fade-out');bg1.classList.remove('fade-out');bg1.classList.add('fade-in')}show1=!show1},5000)}})();
+document.querySelector('.hamburger').addEventListener('click',function(e){e.stopPropagation();document.querySelector('.nav-links').classList.toggle('active')});
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.nav-links').classList.remove('active')})});
+</script>
+</body>
+</html>
