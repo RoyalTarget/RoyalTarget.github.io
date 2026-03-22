@@ -99,10 +99,14 @@ section{padding:5rem 2rem}
 .sc-icon.spotify:hover{background:#1DB954}
 .pi{position:absolute;top:1rem;right:1rem;font-size:1.2rem;opacity:0;transition:opacity .3s;z-index:2;background:rgba(224,32,32,.8);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .sc:hover .pi{opacity:1}
-.ml{display:flex;justify-content:center;gap:2rem;margin-top:3rem;flex-wrap:wrap}
-.mlk{display:inline-flex;align-items:center;gap:8px;padding:.8rem 1.8rem;border:2px solid var(--cream);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
-.mlk:hover{background:var(--red);border-color:var(--red)}
-.mlk svg{width:20px;height:20px;fill:currentColor}
+.ml{display:flex;justify-content:center;gap:2.5rem;margin-top:3rem;flex-wrap:wrap}
+.mlk{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;transition:all .3s;text-decoration:none}
+.mlk svg{width:36px;height:36px;fill:rgba(245,240,232,.5);transition:all .3s}
+.mlk:hover svg{fill:#fff;transform:scale(1.1)}
+.mlk.c-apple:hover{background:#e02020}
+.mlk.c-spotify:hover{background:#1DB954}
+.mlk.c-bandcamp:hover{background:#1DA0C3}
+.mlk.c-soundcloud:hover{background:#FF5500}
 .album-card{max-width:1100px;margin:2rem auto 0}
 .album-link{display:flex;gap:2rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);text-decoration:none;color:var(--cream);transition:all .3s;overflow:hidden}
 .album-link:hover{background:rgba(255,255,255,.08);transform:translateY(-3px);border-color:var(--red)}
@@ -160,8 +164,12 @@ section{padding:5rem 2rem}
 .fullsec-bg.fade-in{opacity:1}
 .fullsec .st{color:var(--cream);position:relative;z-index:2}
 .fullsec .sd{position:relative;z-index:2}
-.fullsec-icon{font-size:3.5rem;position:relative;z-index:2;margin-bottom:1rem;color:var(--cream)}
-.fullsec-icon svg{width:56px;height:56px;fill:var(--cream)}
+.fullsec-icon{position:relative;z-index:2;margin-bottom:1rem}
+.fullsec-icon a{display:inline-flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:16px;transition:all .3s;text-decoration:none}
+.fullsec-icon a svg{width:64px;height:64px;fill:rgba(245,240,232,.6);transition:all .3s}
+.fullsec-icon a:hover svg{fill:#fff;transform:scale(1.1)}
+.fullsec-icon a.c-instagram:hover{background:#E1306C}
+.fullsec-icon a.c-redbubble:hover{background:#e02020}
 .fullsec-text{font-size:1.15rem;color:rgba(245,240,232,.8);font-weight:300;line-height:1.8;max-width:600px;position:relative;z-index:2;margin-bottom:2rem}
 .fullsec-btn{display:inline-block;padding:1rem 2.5rem;border:2px solid var(--cream);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:3px;text-transform:uppercase;transition:all .3s;position:relative;z-index:2;background:rgba(10,20,68,.8)}
 .fullsec-btn:hover{background:var(--red);border-color:var(--red);transform:translateY(-3px)}
@@ -179,10 +187,15 @@ section{padding:5rem 2rem}
 @media(max-width:768px){.press-quote{padding:1.5rem}}
 .connect{background:var(--navy);color:var(--cream);text-align:center}
 .connect .st{color:var(--cream)}
-.socg{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;max-width:800px;margin:0 auto}
-.sl{display:flex;align-items:center;gap:10px;padding:1rem 2rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:var(--cream);text-decoration:none;font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1rem;letter-spacing:1px;transition:all .3s}
-.sl:hover{background:var(--red);border-color:var(--red);transform:translateY(-2px)}
-.sl svg{width:20px;height:20px;fill:currentColor}
+.socg{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;max-width:800px;margin:0 auto}
+.sl{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;transition:all .3s;text-decoration:none}
+.sl svg{width:36px;height:36px;fill:rgba(245,240,232,.5);transition:all .3s}
+.sl:hover svg{fill:#fff;transform:scale(1.1)}
+.sl.c-instagram:hover{background:#E1306C}
+.sl.c-facebook:hover{background:#1877F2}
+.sl.c-github:hover{background:rgba(255,255,255,.2)}
+.sl.c-jango:hover{background:#e02020}
+.sl.c-youtube:hover{background:#FF0000}
 .lp{display:none;padding:6rem 2rem 4rem;background:var(--warm-white);min-height:100vh}
 .lp.active{display:block}
 .lp h1{font-family:'Big Shoulders Display',sans-serif;font-size:2.5rem;font-weight:900;text-transform:uppercase;letter-spacing:4px;margin-bottom:2rem;text-align:center}
@@ -327,10 +340,10 @@ footer a:hover{color:var(--red)}
 </div>
 </div>
 <div class="ml fi">
-<a href="https://music.apple.com/de/artist/royal-target/1476131156" target="_blank" rel="noopener" class="mlk">&#127925; Apple Music</a>
-<a href="https://open.spotify.com/artist/3mjuUgZMPurmTgMnklN2g3" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify</a>
-<a href="https://royaltarget.bandcamp.com" target="_blank" rel="noopener" class="mlk"><svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg>Bandcamp</a>
-<a href="https://soundcloud.com/smiths1967" target="_blank" rel="noopener" class="mlk">&#9835; SoundCloud</a>
+<a href="https://music.apple.com/de/artist/royal-target/1476131156" target="_blank" rel="noopener" class="mlk c-apple" aria-label="Apple Music"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="m10.995 0 .573.001q.241 0 .483.007c.35.01.705.03 1.051.093.352.063.68.166.999.329a3.36 3.36 0 0 1 1.47 1.468c.162.32.265.648.328 1 .063.347.084.7.093 1.051q.007.241.007.483l.001.573v5.99l-.001.573q0 .241-.008.483c-.01.35-.03.704-.092 1.05a3.5 3.5 0 0 1-.33 1 3.36 3.36 0 0 1-1.468 1.468 3.5 3.5 0 0 1-1 .33 7 7 0 0 1-1.05.092q-.241.007-.483.008l-.573.001h-5.99l-.573-.001q-.241 0-.483-.008a7 7 0 0 1-1.052-.092 3.6 3.6 0 0 1-.998-.33 3.36 3.36 0 0 1-1.47-1.468 3.6 3.6 0 0 1-.328-1 7 7 0 0 1-.093-1.05Q.002 11.81 0 11.568V5.005l.001-.573q0-.241.007-.483c.01-.35.03-.704.093-1.05a3.6 3.6 0 0 1 .329-1A3.36 3.36 0 0 1 1.9.431 3.5 3.5 0 0 1 2.896.1 7 7 0 0 1 3.95.008Q4.19.002 4.432 0h.573zm-.107 2.518-4.756.959H6.13a.66.66 0 0 0-.296.133.5.5 0 0 0-.16.31c-.004.027-.01.08-.01.16v5.952c0 .14-.012.275-.106.39-.095.115-.21.15-.347.177l-.31.063c-.393.08-.65.133-.881.223a1.4 1.4 0 0 0-.519.333 1.25 1.25 0 0 0-.332.995c.031.297.166.582.395.792.156.142.35.25.578.296.236.047.49.031.858-.043.196-.04.38-.102.555-.205a1.4 1.4 0 0 0 .438-.405 1.5 1.5 0 0 0 .233-.55c.042-.202.052-.386.052-.588V6.347c0-.276.08-.35.302-.404.024-.005 3.954-.797 4.138-.833.257-.049.378.025.378.294v3.524c0 .14-.001.28-.096.396-.094.115-.211.15-.348.178l-.31.062c-.393.08-.649.133-.88.223a1.4 1.4 0 0 0-.52.334 1.26 1.26 0 0 0-.34.994c.03.297.174.582.404.792a1.2 1.2 0 0 0 .577.294c.237.048.49.03.858-.044.197-.04.381-.098.556-.202a1.4 1.4 0 0 0 .438-.405q.173-.252.233-.549a2.7 2.7 0 0 0 .044-.589V2.865c0-.273-.143-.443-.4-.42-.04.003-.383.064-.424.073"/></svg></a>
+<a href="https://open.spotify.com/artist/3mjuUgZMPurmTgMnklN2g3" target="_blank" rel="noopener" class="mlk c-spotify" aria-label="Spotify"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
+<a href="https://royaltarget.bandcamp.com" target="_blank" rel="noopener" class="mlk c-bandcamp" aria-label="Bandcamp"><svg viewBox="0 0 24 24"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg></a>
+<a href="https://soundcloud.com/smiths1967" target="_blank" rel="noopener" class="mlk c-soundcloud" aria-label="SoundCloud"><svg viewBox="0 0 24 24"><path d="M11.56 8.87V17h8.76c1.85 0 3.35-1.5 3.35-3.35 0-1.85-1.5-3.35-3.35-3.35-.19 0-.37.02-.55.05C19.41 7.36 17.12 5 14.28 5c-1.07 0-2.07.34-2.88.92v2.95h.16zM10.23 9.5V17h.78V8.87c-.28.18-.54.39-.78.63zM9.12 10.94V17h.78v-6.69c-.27.3-.52.63-.73.98l-.05.09v.56zM7.9 17h.78v-5.48c-.12.37-.2.76-.24 1.17l-.54 4.31zM6.67 17h.78v-4.3c0-.03 0-.06-.01-.09L6.67 17zM5.45 17h.78v-4.64l-.78.63V17zM4.22 17H5v-3.45l-.78.63V17zM3 17h.78v-2.26L3 15.37V17z"/></svg></a>
 </div>
 </section>
 
@@ -446,18 +459,16 @@ footer a:hover{color:var(--red)}
 <div class="fullsec-bg fade-out" id="photoBg2" style="background-image:url('images/explore-photo-2.jpeg')"></div>
 <h2 class="st fi">Photography</h2>
 <div class="sd fi"></div>
-<div class="fullsec-icon fi"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+<div class="fullsec-icon fi"><a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="c-instagram" aria-label="View on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div>
 <p class="fullsec-text fi">Street scenes, retro finds, travel moments, and the beauty in everyday details. UK seaside towns, Route 66 motels, and everywhere in between.</p>
-<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="fullsec-btn fi">View on Instagram</a>
 </section>
 
 <section class="fullsec" id="merch">
 <div class="fullsec-bg" style="background-image:url('images/explore-merch-new.jpeg')"></div>
 <h2 class="st fi">Merch Shop</h2>
 <div class="sd fi"></div>
-<div class="fullsec-icon fi"><svg viewBox="0 0 24 24"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg></div>
+<div class="fullsec-icon fi"><a href="https://royaltarget.redbubble.com" target="_blank" rel="noopener" class="c-redbubble" aria-label="Visit Redbubble Store"><svg viewBox="0 0 24 24"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg></a></div>
 <p class="fullsec-text fi">T-shirts, stickers, posters, mugs and more. Retro airline art, Route 66, street photography, and crypto designs — all available on Redbubble.</p>
-<a href="https://royaltarget.redbubble.com" target="_blank" rel="noopener" class="fullsec-btn fi">Visit Redbubble Store</a>
 </section>
 
 <section class="press" id="press">
@@ -492,11 +503,11 @@ footer a:hover{color:var(--red)}
 <h2 class="st fi">Connect</h2>
 <div class="sd fi"></div>
 <div class="socg fi">
-<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
-<a href="https://www.facebook.com/" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
-<a href="https://github.com/RoyalTarget/royal-target-song-primer" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
-<a href="https://www.jango.com/music/Royal+Target" target="_blank" rel="noopener" class="sl">&#9654; Jango Radio</a>
-<a href="https://www.youtube.com/@royaltarget7388" target="_blank" rel="noopener" class="sl"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
+<a href="https://www.instagram.com/royal.target/" target="_blank" rel="noopener" class="sl c-instagram" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+<a href="https://www.facebook.com/" target="_blank" rel="noopener" class="sl c-facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+<a href="https://github.com/RoyalTarget/royal-target-song-primer" target="_blank" rel="noopener" class="sl c-github" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+<a href="https://www.jango.com/music/Royal+Target" target="_blank" rel="noopener" class="sl c-jango" aria-label="Jango Radio"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></a>
+<a href="https://www.youtube.com/@royaltarget7388" target="_blank" rel="noopener" class="sl c-youtube" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
 </div>
 </section>
 
