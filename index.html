@@ -107,8 +107,8 @@ section{padding:5rem 2rem}
 .mlk.c-spotify:hover{background:#1DB954}
 .mlk.c-bandcamp:hover{background:#1DA0C3}
 .mlk.c-soundcloud:hover{background:#FF5500}
-.mlk img,.sl img{width:36px;height:36px;border-radius:8px;opacity:.5;transition:all .3s}
-.mlk:hover img,.sl:hover img{opacity:1;transform:scale(1.1)}
+.mlk img,.sl img{width:36px;height:36px;border-radius:8px;filter:grayscale(1) brightness(.5);transition:all .3s}
+.mlk:hover img,.sl:hover img{filter:grayscale(0) brightness(1);transform:scale(1.1)}
 .album-card{max-width:1100px;margin:2rem auto 0}
 .album-link{display:flex;gap:2rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);text-decoration:none;color:var(--cream);transition:all .3s;overflow:hidden}
 .album-link:hover{background:rgba(255,255,255,.08);transform:translateY(-3px);border-color:var(--red)}
